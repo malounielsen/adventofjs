@@ -1,0 +1,16 @@
+
+.luckor {
+    display: grid; 
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 30px; 
+    
+
+}
+
+.showHatches {
+display: flex;
+flex-direction: row;
+justify-content: center; 
+margin:auto;
+}
