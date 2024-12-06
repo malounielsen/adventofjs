@@ -1,7 +1,7 @@
     import React, { useState }  from "react";
     import Lucks from "./Lucks"; 
     import './Calender.css'; 
-    import One from "./One"; 
+    import {Window}from "./Window"; 
 
     function Calender (){
     const lucks=[]; 
@@ -12,12 +12,17 @@
         };
         lucks.push({object}); 
     }
-
+    
     const show=()=>{
         switch(selectedDay){
-            case 1: 
-            return <One/>;
+        case 1:  
+        return <Window/>; 
+
+        default: 
+        return null; 
+
         }
+
     }
 
 
