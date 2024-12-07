@@ -1,19 +1,41 @@
 import React from "react";
-import './password1.css'; 
+import './Window.css'; 
+import One from "./One/One"; 
+
 
 function Window (props){
-    const {handleClick}=props; 
+    const {closeWindow, next, back, selectedDay}=props; 
+
+
+    const chooseLuck=()=>{
+        switch(selectedDay){
+            case 1: 
+            return <One/>;
+            case 2: 
+            return <One/>; 
+
+            default:
+               return null; 
+
+        }
+    }
+
 
     return(
-        <div class="background">
-          
-        <input class="input" type="password" placeholder="password"></input>
-        <button onClick={handleClick}>Click!!</button>
+        <div className="background">
+        <button onClick={closeWindow}>Click!!</button>
+        <h1>Lucka { selectedDay}</h1>
+        <div>
+           {chooseLuck()}
+        </div>
+           <div className="nextback">
+        <button onClick={back}>Click back!!</button>
+        <button onClick={next}>Click! next!</button>
+        </div>
         </div>
 
     )
 
 }
-
 
 export default Window; 

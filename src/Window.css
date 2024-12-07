@@ -1,0 +1,13 @@
+.background {
+    background-color: white;
+    width: 700px; 
+    height:600px; 
+    position: fixed; 
+
+}
+
+h1{
+    color: rgb(116, 113, 113);
+    margin-top: 100px; 
+}
+

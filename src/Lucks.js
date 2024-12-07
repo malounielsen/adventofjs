@@ -8,7 +8,6 @@ const {day, handleDay}=props;
 
 return(
     <div className="lucks" onClick={handleDay}>
-        
         <p className="date">{day}</p>
     </div>
 )
