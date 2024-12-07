@@ -1,7 +1,8 @@
-    import React, { useState }  from "react";
+    import React, { useEffect, useState }  from "react";
     import Lucks from "./Lucks"; 
+    import Window from "./Window"; 
     import './Calender.css'; 
-    import One from "./One"; 
+   
 
     function Calender (){
     const lucks=[]; 
@@ -14,19 +15,17 @@
     }
 
     const show=()=>{
-        switch(selectedDay){
-            case 1: 
-            return <One/>;
+        if(selectedDay){
+                return <Window closeWindow={()=>setSelectedDay()} next={()=>setSelectedDay(selectedDay+1)} back={()=>setSelectedDay(selectedDay-1)} selectedDay={selectedDay}/>; 
         }
+        
     }
 
 
 
     return (
         <div class="show">
-
         <div class="showHatches">
-            <h1>{selectedDay}</h1>
             {show()}
          </div>
 
