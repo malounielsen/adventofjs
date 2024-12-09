@@ -1,0 +1,5 @@
+textarea {
+    line-height: 20px; 
+    resize: none;
+    overflow:hidden; 
+}

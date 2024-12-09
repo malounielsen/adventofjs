@@ -1,6 +1,11 @@
 import React from "react";
 import './Window.css'; 
 import One from "./One/One"; 
+import Two from "./Two/Two"; 
+import Three from "./Three/Three";
+import Left from "./left-arrow-svgrepo-com.svg";
+import Right from "./right-arrow-svgrepo-com.svg";
+import Cross from "./cross-svgrepo-com.svg"; 
 
 
 function Window (props){
@@ -12,8 +17,9 @@ function Window (props){
             case 1: 
             return <One/>;
             case 2: 
-            return <One/>; 
-
+            return <Two/>; 
+            case 3:
+                return <Three/>
             default:
                return null; 
 
@@ -23,14 +29,14 @@ function Window (props){
 
     return(
         <div className="background">
-        <button onClick={closeWindow}>Click!!</button>
+            <img src={Cross} alt="Close" onClick={closeWindow}/>
         <h1>Lucka { selectedDay}</h1>
-        <div>
+        <div className="fixed">
            {chooseLuck()}
         </div>
            <div className="nextback">
-        <button onClick={back}>Click back!!</button>
-        <button onClick={next}>Click! next!</button>
+        <img src={Left} onClick={back}/>
+        <img src={Right} onClick={next}/>
         </div>
         </div>
 
