@@ -4,7 +4,9 @@ import './Two.css';
 import Arrow from "./dropdown-arrow.svg"; 
 
 function Two(){
+    
     const [isOpen,setOpen]=useState(false); 
+   const [searchWord, setSearch]= useState(""); 
    
 
     function handleClick() {
@@ -12,21 +14,19 @@ function Two(){
         
     }
 
-    function search(){
-        if(isOpen){
-            return <input type="text" placeholder="Search for movies"/>
-        }
-    }
+   const handleSearch=(e)=>{
+        setSearch(e.target.value);    
 
+   }
   
 
 return(
 <div className="dropdown">
-    <div className="menu"><div className="search">{isOpen ? search(): <p>Your favorite holiday movie</p>}</div> 
+    <div className="menu"><div className="search"><input type="text" placeholder="Search for movies" onChange={handleSearch}/></div> 
     <img src={Arrow} onClick={handleClick} alt="Choose"/></div>
      {isOpen && (
             
-            <Movies />
+            <Movies searchWord={searchWord}/>
         
      )}
 </div>
