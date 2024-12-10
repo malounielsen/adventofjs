@@ -4,6 +4,7 @@ import One from "./One/One";
 import Two from "./Two/Two"; 
 import Three from "./Three/Three";
 import Five from "./Five/Five";
+import Six from "./Six/Six"; 
 import Left from "./left-arrow-svgrepo-com.svg";
 import Right from "./right-arrow-svgrepo-com.svg";
 import Cross from "./cross-svgrepo-com.svg"; 
@@ -25,6 +26,8 @@ function Window (props){
                 return <Five/>;
             case 5: 
                 return <Five/>; 
+            case 6:
+                return <Six/>; 
             default:
                return null; 
 
