@@ -3,14 +3,15 @@ import './Two.css';
 
 function Movies(props){
     const [data, setData]= useState([]);
+    const {searchWord}=props; 
+    
 
     useEffect(()=>{
         fetch('/top-100-christmas-movies.json')
         .then (response =>response.json())
+        .then(data=>data.filter((movie)=>movie.Title.includes(searchWord)))
         .then(data=>setData(data))
-    }, []); 
-
-
+    }, [searchWord]); 
 
 return(
 
