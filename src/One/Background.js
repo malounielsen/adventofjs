@@ -2,6 +2,7 @@ import {React, useEffect, useState} from "react";
 import Eye from './Eye'; 
 import Lock from './Lock'; 
 import Input from './Input'; 
+import "./one.css"; 
 
 function Background (){
     const [isVisible, setVisible]=useState(true); 
@@ -21,7 +22,7 @@ function Background (){
 
 
 return (
-             <div class="in" style={isVisible? styles.Visible : styles.notVisible}>
+            <div class="in" style={isVisible? styles.Visible : styles.notVisible}>
             <Lock fillColor={isVisible? styles.Visible.color:styles.notVisible.color}/>
             <div class="line"/>
             <Input fillColor={isVisible? styles.Visible.backgroundColor : styles.notVisible.backgroundColor} color={isVisible? styles.Visible.color:styles.notVisible.color} type={isVisible? styles.Visible.type : styles.notVisible.type}/>

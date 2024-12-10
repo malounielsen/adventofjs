@@ -20,12 +20,11 @@ const [isCopied, setCopied]= useState(false);
 
     const handleChange=(e)=>{
         setText(e.target.value)
-        
     }
 
 
     return (
-        <div>
+        <div className="six">
             <Tooltip id="my-tooltip" />
         <div className="field">
             <input type="text" value={text} onChange={handleChange}></input> 

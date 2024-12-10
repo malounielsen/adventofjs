@@ -1,12 +1,12 @@
 import React from "react";
-
+import "./one.css"; 
 function Input (props){
 
 const {color, background, type}=props; 
 
     return(
         <div>
-           <input type={type}/>
+           <input class="inpu"type={type}/>
         </div>
     )
 }

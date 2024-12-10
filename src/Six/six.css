@@ -8,8 +8,10 @@ input {
     
 }
 
-div {
-    display: block;
+.six {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .field {

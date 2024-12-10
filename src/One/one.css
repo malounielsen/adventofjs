@@ -23,18 +23,21 @@ svg{
     margin-top: 10px; 
 }
 
+
+
 .line {
     border-left: 1px solid whitesmoke; 
     margin: 10px; 
      
 }
 
-input {
-    padding: 15px; 
-    margin: 15px; 
-    margin-right: 25px; 
-    width: 200px;
+.inpu {
+    padding: 10px; 
+    padding-top: 25px; 
+    margin-right: 15px;
+    width: 240px;
     border:none; 
+    font-size: 14px;
     background: transparent;
     color: whitesmoke;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
