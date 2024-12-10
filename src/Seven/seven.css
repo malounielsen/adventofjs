@@ -1,0 +1,25 @@
+.seven {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.input {
+    width: 60%; 
+    background-color: #EDEDED;
+    border: 2px solid #0015FF; 
+    border-radius: 10px;
+    font-size: 24px; 
+}
+
+.input:focus {
+    background-color: #EDEDED;
+    border: 2px solid #0015FF; 
+    border-radius: 10px;
+    font-size: 24px; 
+}
+
+.output {
+    font-size: 16px; 
+    padding-top: 10px; 
+}
