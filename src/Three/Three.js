@@ -1,23 +1,23 @@
-import React, { useEffect, useState , useRef} from "react";
-import './Three.css'
+import React, {useState , useRef} from "react";
 function Three(){
    
-    const [rows,setRows]= useState(); 
+    const [hight, setHight]= useState(50); 
     const texta=useRef(null); 
 
+    const style={
+         
+    }; 
+
     const change=()=>{
-         const textArea=texta.current; 
-        if(textArea){
-            textArea.rows=1;
-            const newRows=textArea.scrollHeight/20; 
-            setRows(newRows); 
-        }
+        console.log(texta.current.scrollHeight); 
+        console.log(texta.current.height); 
+         if (texta.current.scrollHeight>hight){
+            setHight(hight+20)
+         } 
     }
-
-
     return (
         <div>
-            <textarea ref={texta} onChange={change} className="textarea" rows={rows} cols="50"style={{width: '300px'}}></textarea>
+            <textarea ref={texta} onChange={change} className="textarea" style={{height: hight}} ></textarea>
         </div>
     )
 }
